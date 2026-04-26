@@ -460,24 +460,3 @@ The same recovered cipher also powers the browser-side editor in
 `../pfsonline3/`, which can read and write byte-perfect PFS files
 without any DOS emulator in the loop.
 
----
-
-## Appendix: reproducing the discovery
-
-Everything in Part 4 is reproducible from the artifacts in this
-repository:
-
-* `../pfcracker/src/gen_samples.py` — the headless DOSBox oracle.
-* `../pfcracker/samples/` — the 53-sample corpus used for the cipher
-  recovery and round-trip verification.
-* `../pfcracker/src/pfs_cipher.py` — the original reference cipher.
-* `pfs_cipher.py` (this folder) — the user-facing scanner built on
-  top of the recovered cipher.
-* `../pfcracker/PROGRESS.md` — the task log from the original
-  Cowork session, including the moment Claude switched from the
-  disassembly plan to the black-box plan.
-
-A determined reader can rebuild the entire chain from a fresh DOSBox
-install, the original PW.EXE binary, and a Linux sandbox with
-`xvfb-run` and `xdotool`. The cipher will recover identically. There
-is no information in the files this writeup leaves out.
