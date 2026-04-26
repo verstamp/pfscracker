@@ -441,21 +441,6 @@ and they generalize to similar reverse-engineering chores:
   Claude to abandon a half-built investigation and redirect, which
   it did because the cheaper plan was visibly cheaper.
 
-### From cipher to scanner
-
-The cipher itself was implemented as `pfs_cipher.py` in the original
-`pfcracker/` folder — 108 lines, no dependencies. Producing it took
-roughly 53 generated samples and a handful of verification rounds.
-
-This folder, `pfcracker2/`, is the next step: turning the recovered
-cipher into a tool that's actually useful for someone with a folder
-of legacy PFS files on their hard drive. The scanner walks the
-folder, classifies each file by its `0x344` flag byte, and runs the
-slot cipher in reverse to recover passwords from encrypted hits — all
-in a single pass, in seconds, with output filters (`--encrypted-only`,
-`--hide-unknown`, `--hide-single-char`) that make the report easy to
-read on directories that mix many file types.
-
 The same recovered cipher also powers the browser-side editor in
 `../pfsonline3/`, which can read and write byte-perfect PFS files
 without any DOS emulator in the loop.
