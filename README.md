@@ -6,10 +6,7 @@ Walks a directory, identifies every file that looks like a PFS document
 the same pass. Single-file Python script, no dependencies beyond the
 standard library.
 
-This is the user-facing successor to the original `pfcracker/` proof of
-concept. The cipher itself was reverse-engineered there; this tool
-packages it for everyday use against real folders of legacy `.PRO`
-files.
+The script can also be used against a single specified file.
 
 ## Quick start
 
