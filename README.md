@@ -130,10 +130,6 @@ error, and the only fix is to quote.
 - It does not modify the files it scans, even when password recovery
   succeeds.
 
-For a body-cipher implementation that produces byte-perfect PW.EXE
-output for a known set of password prefixes, see the sibling
-`pfsonline3/` browser app in this repo.
-
 ## Files
 
 ```
