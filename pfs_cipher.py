@@ -3,7 +3,7 @@
 pfs_cipher.py - PFS Professional Write 1988 password slot encrypt/decrypt,
 plus a folder scanner that identifies PFS-encrypted files.
 
-Recovered by black-box differential cryptanalysis. See ../pfcracker/PROGRESS.md.
+Recovered by black-box differential cryptanalysis.
 
 The encrypted PFS file has a fixed 0x400-byte header. The password is encoded
 into a fixed slot at offset 0x347, length-prefixed by the byte at 0x346.
